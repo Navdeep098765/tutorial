@@ -23,10 +23,24 @@
                     margin-right:10px;
                 }
                 
-                button{
+               #button{
                     margin: 20px;
                     max-width: 100px;
                 }
+                #button-container
+                {
+                display: flex;
+                background-color: lightblue;
+                border: 1px solid  black;
+                border-radius:  8px;
+                flex-direction: row;
+                margin : 8pxauto;
+                max-width :400px;
+
+
+            
+            }
+
         </style>
        
     </head>
@@ -111,15 +125,22 @@
 
         <fieldset>
             <legend>Additional  Info</legend>
-            <label for ="Number"> Numberof pizza:
-                <input type ="number " name="number"/>
+            <label for ="Number"> Numberof Pizzas:
+                <input type ="number" name="number" max ="10"/>
             </label>
         </fieldset>
 
-        </form>
+    <div id="button-container">
+            <button>Submit</button>
+            <button> Reset</button>
+            <button> Subscribe</button>
+    </div>
+
+    </form>
+
     </body>
     <script>
-        const topping =document. querySelectorAll(".topping");
+        const topping =document.querySelectorAll(".topping");
 
             toppings.forfatch(( topping)=>{
                 topping.checked =false;
